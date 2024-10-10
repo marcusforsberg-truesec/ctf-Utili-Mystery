@@ -209,7 +209,7 @@
           IsProcessRemoteSession : string,
           ProcessRemoteSessionDeviceName : string,
           ProcessRemoteSessionIP : string,
-          InitiatingProcessUniqueId : string,
+          InitiatingProcessUniqueId : string
 )
 
 .ingest into table DeviceProcessEvents ('https://raw.githubusercontent.com/marcusforsberg-truesec/ctf-Utili-Mystery/refs/heads/main/DeviceProcessEvents.csv') with (ignoreFirstRecord=true)
