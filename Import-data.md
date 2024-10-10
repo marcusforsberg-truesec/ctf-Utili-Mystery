@@ -154,8 +154,69 @@
           InitiatingProcessUniqueId : string
 )
 
+.create table DeviceEvents (
+          Timestamp : string,
+          DeviceId : string,
+          DeviceName : string,
+          ActionType : string,
+          FileName : string,
+          FolderPath : string,
+          SHA1 : string,
+          SHA256 : string,
+          MD5 : string,
+          FileSize : string,
+          AccountDomain : string,
+          AccountName : string,
+          AccountSid : string,
+          RemoteUrl : string,
+          ProcessId : string,
+          ProcessCommandLine : string,
+          ProcessCreationTime : string,
+          ProcessTokenElevation : string,
+          LogonId : string,
+          LocalIP : string,
+          LocalPort : string,
+          FileOriginUrl : string,
+          FileOriginIP : string,
+          InitiatingProcessSHA1 : string,
+          InitiatingProcessSHA256 : string,
+          InitiatingProcessMD5 : string,
+          InitiatingProcessFileName : string,
+          InitiatingProcessFileSize : string,
+          InitiatingProcessFolderPath : string,
+          InitiatingProcessId : string,
+          InitiatingProcessCommandLine : string,
+          InitiatingProcessCreationTime : string,
+          InitiatingProcessAccountDomain : string,
+          InitiatingProcessAccountName : string,
+          InitiatingProcessAccountSid : string,
+          InitiatingProcessVersionInfoCompanyName : string,
+          InitiatingProcessVersionInfoProductName : string,
+          InitiatingProcessVersionInfoProductVersion : string,
+          InitiatingProcessVersionInfoInternalFileName : string,
+          InitiatingProcessVersionInfoOriginalFileName : string,
+          InitiatingProcessVersionInfoFileDescription : string,
+          InitiatingProcessParentId : string,
+          InitiatingProcessParentFileName : string,
+          InitiatingProcessParentCreationTime : string,
+          InitiatingProcessLogonId : string,
+          ReportId : string,
+          AdditionalFields : string,
+          InitiatingProcessSessionId : string,
+          IsInitiatingProcessRemoteSession : string,
+          InitiatingProcessRemoteSessionIP : string,
+          CreatedProcessSessionId : string,
+          IsProcessRemoteSession : string,
+          ProcessRemoteSessionDeviceName : string,
+          ProcessRemoteSessionIP : string,
+          InitiatingProcessUniqueId : string,
+)
+
 .ingest into table DeviceProcessEvents ('https://raw.githubusercontent.com/marcusforsberg-truesec/ctf-Utili-Mystery/refs/heads/main/DeviceProcessEvents.csv') with (ignoreFirstRecord=true)
 
 .ingest into table DeviceLogonEvents ('https://raw.githubusercontent.com/marcusforsberg-truesec/ctf-Utili-Mystery/refs/heads/main/DeviceLogonEvents.csv') with (ignoreFirstRecord=true)
 
 .ingest into table DeviceFileEvents ('https://raw.githubusercontent.com/marcusforsberg-truesec/ctf-Utili-Mystery/refs/heads/main/DeviceFileEvents.csv') with (ignoreFirstRecord=true)
+
+.ingest into table DeviceEvents ('https://raw.githubusercontent.com/marcusforsberg-truesec/ctf-Utili-Mystery/refs/heads/main/DeviceEvents.csv') with (ignoreFirstRecord=true)
+
